@@ -7,7 +7,7 @@ export default function App() {
   const [testing, setTesting] = useState('');
   return (
     <View style={styles.container}>
-        <HomeComponents testing="Hello World! ini dari home components"/>
+        <HomeComponents testing="Hello World!"/>
         <TextInput
         style={{height: 40, width: 300, borderColor: 'gray', borderWidth: 1}}
         onChangeText={text => setTesting(text)}
