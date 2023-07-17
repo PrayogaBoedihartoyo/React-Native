@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import HomeComponents from './components/HomeComponents';
-
+// 6
 export default function App() {
   const [testing, setTesting] = useState('');
   return (
