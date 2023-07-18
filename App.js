@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
 import HomeComponents from './components/HomeComponents';
-// 6
+
 export default function App() {
   const [testing, setTesting] = useState('');
   return (
-    <View style={styles.container}>
-        <HomeComponents testing="Welcome!"/>
-        <TextInput
-        style={{height: 40, width: 300, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={text => setTesting(text)}
+//    <View style={styles.container}>
+//        <HomeComponents testing="Welcome!"/>
+//        <TextInput
+//        style={{height: 40, width: 300, borderColor: 'gray', borderWidth: 1}}
+//        onChangeText={text => setTesting(text)}
+//        />
+//        <Text>{testing}</Text>
+//      <StatusBar style="auto" />
+//    </View>
+      <View style={styles.container}>
+      <Image style={{width:500, height:1000}} source={{
+        uri: 'https://wallpaperaccess.com/full/1301265.jpg',
+      }}
         />
-        <Text>{testing}</Text>
-      <StatusBar style="auto" />
-    </View>
+      </View>
   );
 }
 
