@@ -1,34 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
-import HomeComponents from './components/HomeComponents';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  const [testing, setTesting] = useState('');
-  return (
-//    <View style={styles.container}>
-//        <HomeComponents testing="Welcome!"/>
-//        <TextInput
-//        style={{height: 40, width: 300, borderColor: 'gray', borderWidth: 1}}
-//        onChangeText={text => setTesting(text)}
-//        />
-//        <Text>{testing}</Text>
-//      <StatusBar style="auto" />
-//    </View>
-      <View style={styles.container}>
-      <Image style={{width:500, height:1000}} source={{
-        uri: 'https://wallpaperaccess.com/full/1301265.jpg',
-      }}
-        />
-      </View>
-  );
+const App = props => {
+    return (
+        <View style={{flex:1}}>
+            <View style={styles.ViewStyle}>
+                <Text style={styles.textStyle}>Hello</Text>
+            </View>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    ViewStyle: {
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        paddingTop: 15,
+        shadowColor: '#000',
+        shadowOffset: {width:0, height:2},
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
+    },
+    textStyle: {
+        fontSize: 20
+    }
 });
+
+export default App;
